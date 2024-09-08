@@ -1,0 +1,48 @@
+<!-- role-selection.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Selection</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #87CEEB;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #fff;
+        }
+        .role-button {
+            margin: 10px;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            background-color: #000080;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conceptual Ocean Game</h1>
+    <h1>Select Your Role</h1>
+    <button class="role-button" onclick="startGame('fisherman')">Fisherman</button>
+    <button class="role-button" onclick="startGame('captain')">Captain</button>
+    <button class="role-button" onclick="startGame('tourist')">Tourist Operator</button>
+
+    <script>
+        function startGame(role) {
+            localStorage.setItem('role', role);
+            window.location.href = 'game.html';
+        }
+    </script>
+</body>
+</html>
